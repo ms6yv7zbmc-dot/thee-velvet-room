@@ -13,308 +13,279 @@
     --blood: #8b1a3a;
     --gold: #c9a227;
     --soft-gold: #e8d5a3;
-    --smoke: #1a1a1a;
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
     background: var(--deep-black);
     color: #e0d5c8;
     font-family: 'Cormorant Garamond', serif;
     line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.04"/></svg>');
-    pointer-events: none;
-    z-index: 1000;
   }
 
   nav {
     position: fixed;
     top: 0; left: 0; width: 100%;
-    padding: 1.5rem 4rem;
+    padding: 1.4rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
-    transition: background 0.4s;
-  }
-
-  nav.scrolled {
-    background: rgba(10,10,10,0.97);
+    background: rgba(10,10,10,0.95);
     border-bottom: 1px solid rgba(201,162,39,0.15);
   }
 
   .logo {
     font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
-    letter-spacing: 0.25em;
+    font-size: 1.3rem;
+    letter-spacing: 0.22em;
     color: var(--gold);
     text-decoration: none;
   }
 
   .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2.2rem;
     list-style: none;
   }
 
   .nav-links a {
     color: #c9b8a8;
     text-decoration: none;
-    font-size: 1.05rem;
-    letter-spacing: 0.12em;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: color 0.3s;
   }
 
-  .nav-links a:hover {
-    color: var(--gold);
-  }
+  .nav-links a:hover { color: var(--gold); }
 
+  /* Hero */
   .hero {
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.75)),
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000') center/cover no-repeat;
     position: relative;
-    background: 
-      radial-gradient(ellipse at center, rgba(74,14,46,0.35) 0%, transparent 70%),
-      linear-gradient(to bottom, #0a0a0a 0%, #120810 100%);
   }
 
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 70%, transparent 40%, rgba(0,0,0,0.7) 100%);
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
+  .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 1.5rem; }
 
   .hero h1 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    font-size: clamp(2.6rem, 7vw, 5rem);
     font-weight: 700;
     letter-spacing: 0.18em;
     color: var(--gold);
-    margin-bottom: 0.8rem;
-    text-shadow: 0 0 40px rgba(201,162,39,0.25);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(201,162,39,0.3);
   }
 
   .hero .subtitle {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1.5rem;
-    color: #c9b8a8;
-    letter-spacing: 0.3em;
-    margin-bottom: 2.5rem;
+    font-size: 1.4rem;
+    color: #d4c4b0;
+    letter-spacing: 0.25em;
+    margin-bottom: 2rem;
   }
 
   .hero p {
-    max-width: 520px;
-    margin: 0 auto 3rem;
     font-size: 1.25rem;
-    color: #b8a99a;
+    color: #c9b8a8;
+    margin-bottom: 2.5rem;
   }
 
   .btn {
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1rem 2.6rem;
     border: 1px solid var(--gold);
     color: var(--gold);
     text-decoration: none;
     font-family: 'Cinzel', serif;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     font-size: 0.95rem;
     text-transform: uppercase;
-    transition: all 0.4s;
-    background: transparent;
+    transition: all 0.35s;
   }
 
   .btn:hover {
     background: var(--gold);
     color: var(--deep-black);
-    box-shadow: 0 0 30px rgba(201,162,39,0.35);
   }
 
   section {
-    padding: 7rem 2rem;
-    max-width: 1100px;
+    padding: 6.5rem 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
   .section-title {
     font-family: 'Cinzel', serif;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     letter-spacing: 0.15em;
     color: var(--gold);
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   .section-line {
-    width: 80px;
+    width: 70px;
     height: 1px;
     background: var(--gold);
     margin: 0 auto 3.5rem;
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
+  /* About */
   .about-text {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     text-align: center;
-    max-width: 720px;
+    max-width: 780px;
     margin: 0 auto;
     color: #c9b8a8;
   }
 
-  .rooms {
+  /* Pricing Cards */
+  .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 1rem;
   }
 
-  .room-card {
-    background: linear-gradient(145deg, #141014, #0f0c0e);
-    border: 1px solid rgba(201,162,39,0.15);
-    padding: 2.5rem 2rem;
-    text-align: center;
-    transition: all 0.4s;
-    position: relative;
+  .price-card {
+    background: #120e11;
+    border: 1px solid rgba(201,162,39,0.18);
     overflow: hidden;
+    transition: all 0.4s;
   }
 
-  .room-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 3px;
-    background: linear-gradient(90deg, transparent, var(--blood), transparent);
-    opacity: 0;
-    transition: opacity 0.4s;
+  .price-card:hover {
+    border-color: rgba(201,162,39,0.45);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
   }
 
-  .room-card:hover {
-    border-color: rgba(201,162,39,0.4);
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  .price-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
   }
 
-  .room-card:hover::before {
-    opacity: 1;
-  }
-
-  .room-card h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
-    color: var(--soft-gold);
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
-  }
-
-  .room-card p {
-    font-size: 1.1rem;
-    color: #a89888;
-  }
-
-  .principles {
-    background: linear-gradient(to bottom, transparent, rgba(74,14,46,0.08), transparent);
-    padding: 6rem 2rem;
-  }
-
-  .principles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2.5rem;
-    max-width: 1000px;
-    margin: 0 auto;
+  .price-content {
+    padding: 1.8rem 1.6rem 2.2rem;
     text-align: center;
   }
 
-  .principle h4 {
+  .price-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.35rem;
+    color: var(--soft-gold);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.6rem;
+  }
+
+  .price {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin: 0.8rem 0 1rem;
+  }
+
+  .price-card p {
+    font-size: 1.05rem;
+    color: #a89888;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Membership highlight */
+  .membership {
+    background: linear-gradient(145deg, #1a1015, #120c10);
+    border: 1px solid rgba(201,162,39,0.3);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .membership h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+
+  .membership .price {
+    font-size: 2.4rem;
+    margin: 1rem 0;
+  }
+
+  /* Payment & Contact */
+  .info-box {
+    background: #110e10;
+    border: 1px solid rgba(201,162,39,0.2);
+    padding: 2.8rem 2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .info-box h3 {
     font-family: 'Cinzel', serif;
     color: var(--gold);
-    letter-spacing: 0.15em;
-    margin-bottom: 0.6rem;
-    font-size: 1.15rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.1em;
   }
 
-  .principle p {
-    color: #b8a99a;
-    font-size: 1.1rem;
-  }
-
-  .contact-box {
-    max-width: 560px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .contact-box p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+  .info-box p {
+    font-size: 1.2rem;
     color: #c9b8a8;
+    margin-bottom: 0.8rem;
   }
 
-  .contact-note {
-    font-size: 0.95rem;
-    color: #8a7a6a;
-    margin-top: 2.5rem;
-    line-height: 1.7;
+  .highlight {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .venmo {
+    font-size: 1.4rem;
+    margin: 1.5rem 0;
+    letter-spacing: 0.05em;
   }
 
   footer {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 3.5rem 1.5rem;
     border-top: 1px solid rgba(201,162,39,0.12);
-    font-size: 0.95rem;
     color: #6a5a4a;
+    font-size: 0.95rem;
   }
 
-  footer span {
-    color: var(--gold);
-    letter-spacing: 0.15em;
-  }
+  footer span { color: var(--gold); letter-spacing: 0.12em; }
 
   @media (max-width: 768px) {
-    nav {
-      padding: 1.2rem 1.5rem;
-    }
-    .nav-links {
-      display: none;
-    }
-    section {
-      padding: 5rem 1.5rem;
-    }
+    nav { padding: 1.1rem 1.3rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.2rem; }
   }
 </style>
 </head>
 <body>
 
-<nav id="navbar">
+<nav>
   <a href="#" class="logo">THEE VELVET ROOM</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#rooms">Chambers</a></li>
-    <li><a href="#principles">Principles</a></li>
-    <li><a href="#contact">Inquire</a></li>
+    <li><a href="#chambers">Chambers</a></li>
+    <li><a href="#membership">Membership</a></li>
+    <li><a href="#payment">Payment</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -322,8 +293,8 @@
   <div class="hero-content">
     <h1>THEE VELVET ROOM</h1>
     <div class="subtitle">Private Dungeon • Ritual • Surrender</div>
-    <p>An exclusive sanctuary of power, trust, and exquisite sensation.<br>Where velvet meets steel, and desire finds its true form.</p>
-    <a href="#contact" class="btn">Request Access</a>
+    <p>An exclusive sanctuary of power exchange, refined intensity, and absolute discretion.</p>
+    <a href="#chambers" class="btn">View Chambers</a>
   </div>
 </header>
 
@@ -331,98 +302,105 @@
   <h2 class="section-title">The Sanctuary</h2>
   <div class="section-line"></div>
   <p class="about-text">
-    Thee Velvet Room is a private, invitation-only dungeon crafted for those who seek depth beyond the ordinary. 
-    Here, every detail is intentional — from the deep crimson drapery and polished iron to the quiet intensity that fills the air. 
-    We honor the art of dominance and submission as a profound exchange of trust, power, and pleasure.
+    Thee Velvet Room is a private, invitation-style dungeon designed for those who value atmosphere, skill, and trust. 
+    Every space has been carefully composed — deep textures, controlled lighting, and equipment selected for both beauty and function. 
+    We welcome serious practitioners who understand the weight of consent, negotiation, and aftercare.
   </p>
 </section>
 
-<section id="rooms">
+<section id="chambers">
   <h2 class="section-title">The Chambers</h2>
   <div class="section-line"></div>
-  <div class="rooms">
-    <div class="room-card">
-      <h3>The Crimson Hall</h3>
-      <p>Primary play space. Full suspension points, leather restraints, and an atmosphere of controlled intensity.</p>
+
+  <div class="pricing-grid">
+    <!-- Normal Dungeon -->
+    <div class="price-card">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800" alt="Normal Dungeon">
+      <div class="price-content">
+        <h3>Normal Dungeon</h3>
+        <div class="price">$1,500</div>
+        <p>Primary play space with suspension points, restraints, and essential implements. Ideal for focused sessions.</p>
+      </div>
     </div>
-    <div class="room-card">
-      <h3>The Velvet Alcove</h3>
-      <p>Intimate and sensory-focused. Soft light, rich textures, and tools designed for prolonged, deliberate exploration.</p>
+
+    <!-- VIP Dungeon -->
+    <div class="price-card">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800" alt="VIP Dungeon">
+      <div class="price-content">
+        <h3>VIP Dungeon</h3>
+        <div class="price">$2,500</div>
+        <p>Elevated private chamber with refined furnishings, expanded equipment selection, and enhanced atmosphere.</p>
+      </div>
     </div>
-    <div class="room-card">
-      <h3>The Iron Gallery</h3>
-      <p>Structured and architectural. Metal frames, impact implements, and space for formal protocol or rigorous scenes.</p>
-    </div>
-    <div class="room-card">
-      <h3>The Quiet Chamber</h3>
-      <p>Aftercare and reflection. Soft lighting, blankets, water, and the space to return gently from intensity.</p>
+
+    <!-- VIP Double Dungeon -->
+    <div class="price-card">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800" alt="VIP Double Dungeon">
+      <div class="price-content">
+        <h3>VIP Double Dungeon</h3>
+        <div class="price">$4,000</div>
+        <p>Two connected private spaces. Perfect for longer scenes, multiple participants, or extended exploration.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="principles" id="principles">
-  <section>
-    <h2 class="section-title">Our Principles</h2>
-    <div class="section-line"></div>
-    <div class="principles-grid">
-      <div class="principle">
-        <h4>Consent</h4>
-        <p>Explicit, ongoing, and enthusiastically given. Nothing proceeds without it.</p>
-      </div>
-      <div class="principle">
-        <h4>Trust</h4>
-        <p>The foundation of every exchange. Power is only as meaningful as the trust that underpins it.</p>
-      </div>
-      <div class="principle">
-        <h4>Skill</h4>
-        <p>Technique, awareness, and responsibility. Intensity without competence is not welcome here.</p>
-      </div>
-      <div class="principle">
-        <h4>Discretion</h4>
-        <p>Absolute privacy. What happens within these walls remains within these walls.</p>
-      </div>
-    </div>
-  </section>
-</div>
+<section id="membership">
+  <h2 class="section-title">Ownership Registration</h2>
+  <div class="section-line"></div>
+
+  <div class="membership">
+    <h3>Ownership / Membership Registration</h3>
+    <div class="price">$5,000</div>
+    <p style="font-size:1.2rem; color:#c9b8a8; max-width:560px; margin:0 auto 1.5rem;">
+      Full registration granting priority access, extended session privileges, and recognition within Thee Velvet Room.
+    </p>
+  </div>
+</section>
+
+<section id="payment">
+  <h2 class="section-title">Payment</h2>
+  <div class="section-line"></div>
+
+  <div class="info-box">
+    <h3>Accepted Payment Method</h3>
+    <p>All sessions and registrations are paid via Venmo only.</p>
+    <p class="venmo">Venmo: <span class="highlight">@smwhite11948</span></p>
+    <p style="font-size:1.05rem; color:#a89888; margin-top:1.5rem;">
+      Please include your preferred chamber and preferred date in the payment note.
+    </p>
+  </div>
+</section>
 
 <section id="contact">
-  <h2 class="section-title">Inquire</h2>
+  <h2 class="section-title">Inquiries</h2>
   <div class="section-line"></div>
-  <div class="contact-box">
-    <p>
-      Thee Velvet Room operates by private arrangement only.<br>
-      Those who wish to enter must first make themselves known.
+
+  <div class="info-box">
+    <h3>Private Contact</h3>
+    <p>For availability, questions, or to arrange a session:</p>
+    <p style="font-size:1.35rem; margin:1.2rem 0;">
+      <span class="highlight">emmavou577@outlook.com</span>
     </p>
-    <a href="mailto:inquiries@theevelvetroom.example" class="btn">Send Inquiry</a>
-    <p class="contact-note">
-      All communications are treated with complete confidentiality.<br>
-      We practice SSC / RACK principles. Safety, negotiation, and aftercare are non-negotiable.
+    <p style="font-size:1.05rem; color:#a89888; margin-top:1.8rem;">
+      All communications are treated with complete discretion.<br>
+      Consent, negotiation, and aftercare are required principles.
     </p>
   </div>
 </section>
 
 <footer>
   <p><span>THEE VELVET ROOM</span><br>
-  Private Dungeon • Est. in Shadow</p>
+  Private Dungeon • Absolute Discretion</p>
 </footer>
 
 <script>
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    if (window.scrollY > 80) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
-
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 </script>
