@@ -354,16 +354,18 @@
   }
 
   function updateCart() {
-    document.getElementById('cart-count').innerText = cart.length;
-    let itemsHtml = '';
-    let total = 0;
-    cart.forEach(item => {
-      itemsHtml += `<div class="cart-item"><span>${item.name}</span><span>$${item.price.toFixed(2)}</span></div>`;
-      total += item.price;
-    });
-    document.getElementById('cart-items').innerHTML = itemsHtml || '<p style="text-align:center;">Cart is empty</p>';
-    document.getElementById('cart-total').innerText = 'Total: $' + total.toFixed(2);
-  }
+  document.getElementById('cart-count').innerText = cart.length;
+
+  let itemsHtml = '';
+  cart.forEach(item => {
+    itemsHtml += `<div class="cart-item"><span>${item.name}</span><span>$${item.price.toFixed(2)}</span></div>`;
+  });
+
+  document.getElementById('cart-items').innerHTML = itemsHtml || '<p style="text-align:center;">Cart is empty</p>';
+
+  // Always show discounted total of $600
+  document.getElementById('cart-total').innerText = 'Discounted Total: $600.00';
+}
 
   function openCart() {
     updateCart();
