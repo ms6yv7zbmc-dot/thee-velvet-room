@@ -4,275 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thee Velvet Room | Private BDSM Dungeon</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --velvet: #4a0e2e;
-    --deep-black: #0a0a0a;
-    --blood: #8b1a3a;
     --gold: #c9a227;
     --soft-gold: #e8d5a3;
+    --deep-black: #0a0a0a;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     background: var(--deep-black);
     color: #e0d5c8;
     font-family: 'Cormorant Garamond', serif;
     line-height: 1.6;
   }
-
   nav {
-    position: fixed;
-    top: 0; left: 0; width: 100%;
-    padding: 1.4rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    background: rgba(10,10,10,0.95);
+    position: fixed; top: 0; width: 100%;
+    padding: 1.2rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(10,10,10,0.96);
     border-bottom: 1px solid rgba(201,162,39,0.15);
+    z-index: 100;
   }
-
   .logo {
     font-family: 'Cinzel', serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.2em;
     color: var(--gold);
     text-decoration: none;
+    font-size: 1.25rem;
   }
-
-  .nav-links {
-    display: flex;
-    gap: 2.2rem;
-    list-style: none;
-  }
-
+  .nav-links { display: flex; gap: 1.8rem; list-style: none; }
   .nav-links a {
-    color: #c9b8a8;
-    text-decoration: none;
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    transition: color 0.3s;
+    color: #c9b8a8; text-decoration: none;
+    font-size: 0.95rem; letter-spacing: 0.1em; text-transform: uppercase;
   }
-
   .nav-links a:hover { color: var(--gold); }
-
-  /* Hero */
+  .cart-btn {
+    background: transparent; border: 1px solid var(--gold);
+    color: var(--gold); padding: 0.5rem 1rem;
+    font-family: 'Cinzel', serif; cursor: pointer; letter-spacing: 0.1em;
+  }
   .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100vh; display: flex; align-items: center; justify-content: center;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.75)),
-                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000') center/cover no-repeat;
-    position: relative;
+                url('IMG_5778.jpeg') center/cover no-repeat;
   }
-
-  .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 1.5rem; }
-
   .hero h1 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.6rem, 7vw, 5rem);
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    text-shadow: 0 0 30px rgba(201,162,39,0.3);
+    font-size: clamp(2.5rem, 7vw, 4.8rem);
+    letter-spacing: 0.15em; color: var(--gold); margin-bottom: 1rem;
   }
-
   .hero .subtitle {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.4rem;
-    color: #d4c4b0;
-    letter-spacing: 0.25em;
-    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 1.3rem; letter-spacing: 0.2em; margin-bottom: 2rem;
   }
-
-  .hero p {
-    font-size: 1.25rem;
-    color: #c9b8a8;
-    margin-bottom: 2.5rem;
-  }
-
   .btn {
-    display: inline-block;
-    padding: 1rem 2.6rem;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    text-decoration: none;
-    font-family: 'Cinzel', serif;
-    letter-spacing: 0.18em;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    transition: all 0.35s;
+    display: inline-block; padding: 0.9rem 2.2rem;
+    border: 1px solid var(--gold); color: var(--gold);
+    text-decoration: none; font-family: 'Cinzel', serif;
+    letter-spacing: 0.15em; text-transform: uppercase; transition: 0.3s;
   }
-
-  .btn:hover {
-    background: var(--gold);
-    color: var(--deep-black);
-  }
-
-  section {
-    padding: 6.5rem 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
+  .btn:hover { background: var(--gold); color: #000; }
+  section { padding: 5.5rem 1.5rem; max-width: 1200px; margin: 0 auto; }
   .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.3rem;
-    letter-spacing: 0.15em;
-    color: var(--gold);
-    text-align: center;
-    margin-bottom: 0.8rem;
+    font-family: 'Cinzel', serif; font-size: 2.1rem;
+    letter-spacing: 0.12em; color: var(--gold); text-align: center; margin-bottom: 0.6rem;
   }
-
   .section-line {
-    width: 70px;
-    height: 1px;
-    background: var(--gold);
-    margin: 0 auto 3.5rem;
-    opacity: 0.7;
+    width: 70px; height: 1px; background: var(--gold);
+    margin: 0 auto 3rem; opacity: 0.7;
   }
-
-  /* About */
-  .about-text {
-    font-size: 1.3rem;
-    text-align: center;
-    max-width: 780px;
-    margin: 0 auto;
-    color: #c9b8a8;
-  }
-
-  /* Pricing Cards */
   .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
   }
-
   .price-card {
     background: #120e11;
     border: 1px solid rgba(201,162,39,0.18);
-    overflow: hidden;
-    transition: all 0.4s;
+    overflow: hidden; transition: 0.3s;
   }
-
   .price-card:hover {
     border-color: rgba(201,162,39,0.45);
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    transform: translateY(-6px);
   }
-
   .price-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
+    width: 100%; height: 220px; object-fit: cover; display: block;
   }
-
-  .price-content {
-    padding: 1.8rem 1.6rem 2.2rem;
-    text-align: center;
-  }
-
+  .price-content { padding: 1.5rem; text-align: center; }
   .price-card h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.35rem;
-    color: var(--soft-gold);
-    letter-spacing: 0.08em;
-    margin-bottom: 0.6rem;
+    font-family: 'Cinzel', serif; font-size: 1.2rem;
+    color: var(--soft-gold); margin-bottom: 0.5rem;
   }
-
   .price {
-    font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
-    color: var(--gold);
-    margin: 0.8rem 0 1rem;
+    font-family: 'Cinzel', serif; font-size: 1.5rem;
+    color: var(--gold); margin: 0.6rem 0 1rem;
   }
-
-  .price-card p {
-    font-size: 1.05rem;
-    color: #a89888;
-    margin-bottom: 1.5rem;
+  .add-btn {
+    background: transparent; border: 1px solid var(--gold);
+    color: var(--gold); padding: 0.55rem 1.3rem;
+    font-family: 'Cinzel', serif; cursor: pointer; letter-spacing: 0.08em;
+    width: 100%; transition: 0.3s;
   }
-
-  /* Membership highlight */
-  .membership {
-    background: linear-gradient(145deg, #1a1015, #120c10);
-    border: 1px solid rgba(201,162,39,0.3);
-    padding: 3rem 2rem;
-    text-align: center;
-    margin-top: 3rem;
-  }
-
-  .membership h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
-    color: var(--gold);
-    margin-bottom: 0.8rem;
-  }
-
-  .membership .price {
-    font-size: 2.4rem;
-    margin: 1rem 0;
-  }
-
-  /* Payment & Contact */
+  .add-btn:hover { background: var(--gold); color: #000; }
   .info-box {
-    background: #110e10;
-    border: 1px solid rgba(201,162,39,0.2);
-    padding: 2.8rem 2rem;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
+    background: #110e10; border: 1px solid rgba(201,162,39,0.2);
+    padding: 2.5rem 1.8rem; text-align: center; max-width: 700px; margin: 0 auto;
   }
-
-  .info-box h3 {
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-    letter-spacing: 0.1em;
-  }
-
-  .info-box p {
-    font-size: 1.2rem;
-    color: #c9b8a8;
-    margin-bottom: 0.8rem;
-  }
-
-  .highlight {
-    color: var(--gold);
-    font-weight: 600;
-  }
-
-  .venmo {
-    font-size: 1.4rem;
-    margin: 1.5rem 0;
-    letter-spacing: 0.05em;
-  }
-
+  .highlight { color: var(--gold); font-weight: 600; }
   footer {
-    text-align: center;
-    padding: 3.5rem 1.5rem;
+    text-align: center; padding: 3rem 1.5rem;
     border-top: 1px solid rgba(201,162,39,0.12);
-    color: #6a5a4a;
-    font-size: 0.95rem;
+    color: #6a5a4a; font-size: 0.95rem;
   }
-
-  footer span { color: var(--gold); letter-spacing: 0.12em; }
-
+  /* Cart Modal */
+  .cart-modal {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85); z-index: 200; align-items: center; justify-content: center;
+  }
+  .cart-content {
+    background: #120e11; border: 1px solid var(--gold);
+    width: 90%; max-width: 480px; padding: 2rem; max-height: 80vh; overflow-y: auto;
+  }
+  .cart-content h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1.5rem; text-align: center; }
+  .cart-item { display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 1.1rem; }
+  .cart-total { margin-top: 1.5rem; font-size: 1.4rem; color: var(--gold); text-align: center; }
+  .close-cart { margin-top: 1.5rem; width: 100%; }
   @media (max-width: 768px) {
-    nav { padding: 1.1rem 1.3rem; }
     .nav-links { display: none; }
-    section { padding: 5rem 1.2rem; }
   }
 </style>
 </head>
@@ -281,247 +141,238 @@
 <nav>
   <a href="#" class="logo">THEE VELVET ROOM</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
+    <li><a href="#toys">Toys</a></li>
     <li><a href="#chambers">Chambers</a></li>
     <li><a href="#membership">Membership</a></li>
     <li><a href="#payment">Payment</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="cart-btn" onclick="openCart()">Cart (<span id="cart-count">0</span>)</button>
 </nav>
 
 <header class="hero">
-  <div class="hero-content">
+  <div>
     <h1>THEE VELVET ROOM</h1>
     <div class="subtitle">Private Dungeon • Ritual • Surrender</div>
-    <p>An exclusive sanctuary of power exchange, refined intensity, and absolute discretion.</p>
-    <a href="#chambers" class="btn">View Chambers</a>
+    <a href="#toys" class="btn">Shop Toys</a>
   </div>
 </header>
 
-<section id="about">
-  <h2 class="section-title">The Sanctuary</h2>
-  <div class="section-line"></div>
-  <p class="about-text">
-    Thee Velvet Room is a private, invitation-style dungeon designed for those who value atmosphere, skill, and trust. 
-    Every space has been carefully composed — deep textures, controlled lighting, and equipment selected for both beauty and function. 
-    We welcome serious practitioners who understand the weight of consent, negotiation, and aftercare.
-  </p>
-</section>
+<!-- ADULT TOYS -->
 <section id="toys">
   <h2 class="section-title">Adult Toys</h2>
   <div class="section-line"></div>
-
   <div class="pricing-grid">
 
-    <!-- Butt Plug -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600" alt="Glass Anal Plugs">
+      <img src="buttplug.JPG" alt="Glass Anal Plugs">
       <div class="price-content">
         <h3>3-Piece Glass Anal Plug Set</h3>
         <div class="price">$33.99</div>
-        <p>Elegant glass butt plugs, set of 3 different sizes.</p>
+        <button class="add-btn" onclick="addToCart('3-Piece Glass Anal Plug Set', 33.99)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Cock Ring -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=600" alt="Remote Control Cock Ring">
+      <img src="cockring.JPG" alt="Cock Ring">
       <div class="price-content">
         <h3>Remote Control Cock Ring</h3>
         <div class="price">$100.00</div>
-        <p>Vibrating cock ring with remote control.</p>
+        <button class="add-btn" onclick="addToCart('Remote Control Cock Ring', 100.00)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Catsuit -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600" alt="Red Catsuit">
+      <img src="catsuit.JPG" alt="Red Catsuit">
       <div class="price-content">
         <h3>Red Catsuit</h3>
         <div class="price">$100.95</div>
-        <p>Full body red catsuit.</p>
+        <button class="add-btn" onclick="addToCart('Red Catsuit', 100.95)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Vibrating Dildo -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600" alt="Echo Silicone Vibrating Dildo">
+      <img src="dildo.JPG" alt="Vibrating Dildo">
       <div class="price-content">
         <h3>Echo Silicone Vibrating Dildo</h3>
         <div class="price">$105.99</div>
-        <p>High-quality silicone vibrating dildo.</p>
+        <button class="add-btn" onclick="addToCart('Echo Silicone Vibrating Dildo', 105.99)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Nipple Clamps -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=600" alt="Nipple Clamps">
+      <img src="nippleclamps.JPG" alt="Nipple Clamps">
       <div class="price-content">
         <h3>Nipple Clamps</h3>
         <div class="price">$50.00</div>
-        <p>Adjustable nipple clamps.</p>
+        <button class="add-btn" onclick="addToCart('Nipple Clamps', 50.00)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Lubricant -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=600" alt="Silicone Anal Lubricant">
+      <img src="lube.JPG" alt="Lubricant">
       <div class="price-content">
-        <h3>Cleanstream Silicone Anal Lube (8 oz)</h3>
+        <h3>Cleanstream Silicone Anal Lube 8oz</h3>
         <div class="price">$19.95</div>
-        <p>Premium silicone anal lubricant.</p>
+        <button class="add-btn" onclick="addToCart('Cleanstream Silicone Anal Lube 8oz', 19.95)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- P-Spot Toy -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600" alt="P-Spot Plug">
+      <img src="pspot.JPG" alt="P-Spot Toy">
       <div class="price-content">
         <h3>Radar 12-Mode P-Spot Plug</h3>
         <div class="price">$60.95</div>
-        <p>Remote control P-spot plug with 12 modes.</p>
+        <button class="add-btn" onclick="addToCart('Radar 12-Mode P-Spot Plug', 60.95)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Rabbit Vibrator -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=600" alt="Rabbit Vibrator">
+      <img src="rabbit.JPG" alt="Rabbit Vibrator">
       <div class="price-content">
         <h3>3-Speed Waterproof Rabbit Vibrator</h3>
         <div class="price">$104.95</div>
-        <p>Waterproof rabbit vibrator with 3 speeds.</p>
+        <button class="add-btn" onclick="addToCart('3-Speed Waterproof Rabbit Vibrator', 104.95)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Magic Cage -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=600" alt="Magic Cage">
+      <img src="magiccage .JPG" alt="Magic Cage">
       <div class="price-content">
         <h3>Magic Cage</h3>
         <div class="price">$150.00</div>
-        <p>Premium chastity cage.</p>
+        <button class="add-btn" onclick="addToCart('Magic Cage', 150.00)">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Male Masturbator -->
     <div class="price-card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600" alt="VR Stroker">
+      <img src="masturbator.JPG" alt="Male Masturbator">
       <div class="price-content">
         <h3>Virtual Reality Stroker</h3>
         <div class="price">$139.95</div>
-        <p>Advanced male masturbator / VR stroker.</p>
+        <button class="add-btn" onclick="addToCart('Virtual Reality Stroker', 139.95)">Add to Cart</button>
       </div>
     </div>
 
   </div>
 </section>
+
+<!-- CHAMBERS -->
 <section id="chambers">
   <h2 class="section-title">The Chambers</h2>
   <div class="section-line"></div>
-
   <div class="pricing-grid">
-  <!-- Normal Dungeon -->
-  <div class="price-card">
-    <img src="IMG_5778.jpeg" alt="Normal Dungeon">
-    <div class="price-content">
-      <h3>Normal Dungeon</h3>
-      <div class="price">$1,500</div>
-      <p>Primary play space with suspension points, restraints, and essential implements. Ideal for focused sessions.</p>
+    <div class="price-card">
+      <img src="IMG_5778.jpeg" alt="Normal Dungeon">
+      <div class="price-content">
+        <h3>Normal Dungeon</h3>
+        <div class="price">$1,500</div>
+        <p>Primary play space with suspension points, restraints, and essential implements.</p>
+      </div>
+    </div>
+    <div class="price-card">
+      <img src="IMG_5779.jpeg" alt="VIP Dungeon">
+      <div class="price-content">
+        <h3>VIP Dungeon</h3>
+        <div class="price">$2,500</div>
+        <p>Elevated private chamber with refined furnishings and expanded equipment.</p>
+      </div>
+    </div>
+    <div class="price-card">
+      <img src="IMG_5780.jpeg" alt="VIP Double Dungeon">
+      <div class="price-content">
+        <h3>VIP Double Dungeon</h3>
+        <div class="price">$4,000</div>
+        <p>Two connected private spaces for longer scenes or multiple participants.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- VIP Dungeon -->
-  <div class="price-card">
-    <img src="IMG_5779.jpeg" alt="VIP Dungeon">
-    <div class="price-content">
-      <h3>VIP Dungeon</h3>
-      <div class="price">$2,500</div>
-      <p>Elevated private chamber with refined furnishings, expanded equipment selection, and enhanced atmosphere.</p>
-    </div>
-  </div>
-
-  <!-- VIP Double Dungeon -->
-  <div class="price-card">
-    <img src="IMG_5780.jpeg" alt="VIP Double Dungeon">
-    <div class="price-content">
-      <h3>VIP Double Dungeon</h3>
-      <div class="price">$4,000</div>
-      <p>Two connected private spaces. Perfect for longer scenes, multiple participants, or extended exploration.</p>
-    </div>
-  </div>
-</div>
+<!-- MEMBERSHIP -->
 <section id="membership">
   <h2 class="section-title">Ownership Registration</h2>
   <div class="section-line"></div>
-
-  <div class="membership">
-    <h3>Ownership / Membership Registration</h3>
-    <div class="price">$5,000</div>
-    <p style="font-size:1.2rem; color:#c9b8a8; max-width:560px; margin:0 auto 1.5rem;">
-      Full registration granting priority access, extended session privileges, and recognition within Thee Velvet Room.
-    </p>
+  <div class="info-box">
+    <h3 style="font-family:'Cinzel',serif; color:var(--gold); margin-bottom:1rem;">Ownership / Membership</h3>
+    <div class="price" style="font-size:2.2rem;">$5,000</div>
+    <p>Full registration with priority access and extended privileges.</p>
   </div>
 </section>
 
+<!-- PAYMENT -->
 <section id="payment">
   <h2 class="section-title">Payment</h2>
   <div class="section-line"></div>
-
   <div class="info-box">
-    <h3>Payment Method</h3>
-    <p>All sessions and registrations are paid exclusively through Venmo.</p>
-    
-    <p class="venmo" style="font-size: 1.6rem; margin: 1.8rem 0 1rem;">
-      Venmo Username: <span class="highlight">@smwhite11948</span>
-    </p>
-
-    <p style="font-size: 1.15rem; color: #c9b8a8; margin-bottom: 1.5rem;">
-      Please include the following in your Venmo payment note:
-    </p>
-
-    <ul style="text-align: left; display: inline-block; font-size: 1.1rem; color: #d4c4b0; margin-bottom: 2rem;">
-      <li>Your full name or preferred name</li>
-      <li>Chosen chamber (Normal / VIP / VIP Double / Ownership)</li>
-      <li>Preferred date or time frame</li>
-    </ul>
-
-    <p style="font-size: 1.05rem; color: #a89888;">
-      Once payment is received, you will receive a confirmation email at the address you provide.
-    </p>
+    <h3 style="font-family:'Cinzel',serif; color:var(--gold); margin-bottom:1rem;">Payment Method</h3>
+    <p>All payments are made via Venmo only.</p>
+    <p style="font-size:1.5rem; margin:1.5rem 0;" class="highlight">@smwhite11948</p>
+    <p>Include your name, items ordered, and preferred date in the Venmo note.</p>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-  <h2 class="section-title">Inquiries</h2>
+  <h2 class="section-title">Contact</h2>
   <div class="section-line"></div>
-
   <div class="info-box">
-    <h3>Private Contact</h3>
-    <p>For availability, questions, or to arrange a session:</p>
-    <p style="font-size:1.35rem; margin:1.2rem 0;">
-      <span class="highlight">emmavou577@outlook.com</span>
-    </p>
-    <p style="font-size:1.05rem; color:#a89888; margin-top:1.8rem;">
-      All communications are treated with complete discretion.<br>
-      Consent, negotiation, and aftercare are required principles.
+    <p>Email: <span class="highlight">emmavou577@outlook.com</span></p>
+    <p style="margin-top:1.2rem; font-size:1.05rem; color:#a89888;">
+      All communications are treated with complete discretion.
     </p>
   </div>
 </section>
 
 <footer>
-  <p><span>THEE VELVET ROOM</span><br>
+  <p><span style="color:var(--gold); letter-spacing:0.12em;">THEE VELVET ROOM</span><br>
   Private Dungeon • Absolute Discretion</p>
 </footer>
 
+<!-- Cart Modal -->
+<div class="cart-modal" id="cartModal">
+  <div class="cart-content">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total" id="cart-total">Total: $0.00</div>
+    <p style="text-align:center; margin-top:1.5rem; color:#c9b8a8;">
+      Please send the total amount via Venmo to<br>
+      <strong style="color:var(--gold);">@smwhite11948</strong><br>
+      and include the items in the note.
+    </p>
+    <button class="btn close-cart" onclick="closeCart()" style="width:100%; margin-top:1.5rem;">Close</button>
+  </div>
+</div>
+
 <script>
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
+  let cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCart();
+    alert(name + " added to cart");
+  }
+
+  function updateCart() {
+    document.getElementById('cart-count').innerText = cart.length;
+    let itemsHtml = '';
+    let total = 0;
+    cart.forEach(item => {
+      itemsHtml += `<div class="cart-item"><span>${item.name}</span><span>$${item.price.toFixed(2)}</span></div>`;
+      total += item.price;
     });
-  });
+    document.getElementById('cart-items').innerHTML = itemsHtml || '<p style="text-align:center;">Cart is empty</p>';
+    document.getElementById('cart-total').innerText = 'Total: $' + total.toFixed(2);
+  }
+
+  function openCart() {
+    updateCart();
+    document.getElementById('cartModal').style.display = 'flex';
+  }
+
+  function closeCart() {
+    document.getElementById('cartModal').style.display = 'none';
+  }
 </script>
 
 </body>
